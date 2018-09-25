@@ -9,22 +9,27 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Thanks</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <title>Index</title>
+    <style>
+        .btn a {
+            color: white;
+            text-decoration: none
+        }
+
+        body {
+            background-color: #F1F1F1;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <h1>Thank you, @Model.Name!</h1>
-
-          @if (Model.WillAttend == true)
-
-           {
-                 @:It's great that you're coming. The drinks are already in the fridge!
-           }
-           else
-           {
-                 @:Sorry to hear that you can't make it, but thanks for letting us know.
-           }
-
+    <div class="text-center">
+        <h2>We’re going to have an exciting party!</h2>
+        <h3>And you are invited</h3>
+        <div class="btn btn-success">
+            @Html.ActionLink("RSVP Now", "RsvpForm")
+        </div>
     </div>
 </body>
 </html>
